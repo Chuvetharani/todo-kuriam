@@ -1,10 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import "./App.css";
-
-library.add(faCheck);
 
 const TodoList = props => (
   <ul className="list-group">
@@ -45,12 +40,7 @@ const TodoListItem = ({
   return (
     <li className="list-group-item">
       <div className={item.done ? "done" : "undone"}>
-      <i class="fa fa-check" aria-hidden="true"></i>
-        <FontAwesomeIcon
-          className="icon"
-          icon={faCheck}
-          onClick={() => markTodoDone(itemIndex)}
-        />
+        <span onClick={() => setEditMode(true)}>🎀</span>
         <span onClick={() => setEditMode(true)}>
           {editMode ? (
             <input className="list-input"
@@ -69,7 +59,7 @@ const TodoListItem = ({
           type="button"
           className="close"
           onClick={() => removeItem(itemIndex)}
-        >X
+        >🗑️
         </button>
       </div>
     </li>
@@ -100,14 +90,14 @@ const TodoForm = ({ addItem }) => {
         className="form-control todo-input"
         placeholder="add a new todo..."
       />
-      <button type="submit" className="btn btn-light">
+      <button className="red-button" type="submit">
         Add
       </button>
     </form>
   );
 };
 
-const TodoHeader = () => <h1>Todo list</h1>;
+const TodoHeader = () => <h1 style={{ marginLeft: 40 }}>Todo list</h1>;
 
 const TodoApp = props => {
   const [todoItems, setTodoItems] = useState(props.initItems);

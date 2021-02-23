@@ -6,21 +6,25 @@
 }
 
 body {
-  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  background-image: url(./bg-n.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .login {
   width: 100%;
   min-height: 100vh;
   padding: 0 20px;
-  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  background-image: url(./bg-n.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
 }
 
 .login .login-box {
   width: 350px;
   height: 350px;
-  margin-top: 1%;
-  margin-left: 37%;
+  margin-top: 3%;
+  margin-left: 60%;
   background: rgba(0, 0,0,0.5);
   color: #fff;
   top: 50%;
@@ -96,7 +100,7 @@ h1 {
   background: linear-gradient(darkblue, darkred);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
+  margin-left: 52%;
 }
 
 input {
@@ -106,7 +110,6 @@ input {
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 button {
@@ -114,7 +117,7 @@ button {
   margin: 10px;
   border: none;
   float: inherit;
-  border-radius: 5px;
+  border-radius: 50%;
   background: linear-gradient(green, blue);
   outline: none;
   color: #fff;
@@ -127,21 +130,20 @@ button {
   border: none;
   float: inherit;
   border-radius: 5px;
-  background: linear-gradient( rgb(74, 7, 83), rgb(5, 104, 87));
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
   outline: none;
   color: #fff;
   font-weight: bold;
   font-size: 20px;
 }
 #main {
-  width: 600px;
-  margin: 0 auto;
-  text-align: center;
+  width: 500px;
+  margin-left: 50%;
+  text-align: left;
 }
 
 ul {
   list-style: none;
-  font-size: 20px;
 }
 
 ul > li:hover {
@@ -150,19 +152,22 @@ ul > li:hover {
 
 .form-inline .form-control {
   margin: 0.6rem;
-  width: 50%;
-  margin-left: 50px;
+  width: 40%;
 }
 
 .done {
   color: rgb(182, 13, 13);
   text-decoration: line-through;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .undone {
   color: rgb(2, 51, 10);
+  font-weight: bold;
+  font-size: 25px;
 }
 
-.icon {
+span {
   margin: 6px 10px 0;
 }
